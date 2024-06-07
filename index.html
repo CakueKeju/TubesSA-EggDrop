@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Drop Problem</title>
+    <style>
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+ 	    max-width: 200px;
+        }
+
+        .inputs label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Egg Drop Problem</h1>
+        <div class="inputs">
+            <label for="floors">Number of Floors:</label>
+            <input type="number" id="floors" min="1" required>
+            <label for="eggs">Number of Eggs:</label>
+            <input type="number" id="eggs" min="1" required>
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" min="1" required>
+            <label for="drop_cost">Cost per Drop:</label>
+            <input type="number" id="drop_cost" min="1" required>
+            <label for="egg_breaks_at">Egg Breaks At (Optional):</label>
+            <input type="number" id="egg_breaks_at" min="1">
+            <button id="randomize_btn">Randomize Egg Breaks At</button>
+            <button id="calculate_btn">Calculate</button>
+        </div>
+        <div class="results">
+            <div class="result-section" id="brute_force_result">
+                <h2>Brute Force Solution</h2>
+                <p id="bf_attempts"></p>
+                <p id="bf_floor"></p>
+                <p id="bf_runtime"></p>
+                <p id="bf_cost"></p>
+                <p id="bf_budget"></p>
+            </div>
+            <div class="result-section" id="dynamic_programming_result">
+                <h2>Dynamic Programming Solution</h2>
+                <p id="dp_attempts"></p>
+                <p id="dp_floor"></p>
+                <p id="dp_runtime"></p>
+                <p id="dp_cost"></p>
+                <p id="dp_budget"></p>
+            </div>
+        </div>
+        <div class="comparison">
+            <h2>Budget Comparison</h2>
+            <p id="comparison_result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
